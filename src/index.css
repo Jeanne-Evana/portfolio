@@ -1,0 +1,251 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Libre Baskerville", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Syne", system-ui, sans-serif;
+
+  /* Light academia — sunlit library by the sea */
+  --color-parchment: #f7f2e8;
+  --color-parchment-dark: #ebe3d4;
+  --color-ink: #2c2416;
+  --color-ink-muted: #5c5346;
+  --color-navy: #3d4f5f;
+  --color-navy-light: #526878;
+  --color-sea: #6aabb8;
+  --color-sea-deep: #4a8494;
+  --color-sand: #c4a882;
+  --color-sand-light: #d9c9a8;
+  --color-wood: #8b6914;
+  --color-wood-dark: #6b4f2a;
+  --color-burgundy: #7a3b3b;
+  --color-sage: #6b7f6a;
+  --color-rose: #b8867a;
+
+  /* Solarpunk ecosystem */
+  --color-canopy: #1b4332;
+  --color-fern: #2d6a4f;
+  --color-moss: #40916c;
+  --color-leaf: #52b788;
+  --color-leaf-light: #74c69d;
+  --color-bloom: #d4a574;
+  --color-mycelium: #c9b896;
+  --color-water: #4a90a4;
+  --color-soil: #3d2b1f;
+}
+
+/* ── Light academia (default) ── */
+:root {
+  --bg-base: #f7f2e8;
+  --bg-surface: #faf6ef;
+  --bg-elevated: #ebe3d4;
+  --text-primary: #2c2416;
+  --text-muted: #5c5346;
+  --accent: #4a8494;
+  --accent-soft: #6aabb8;
+  --border: color-mix(in srgb, #6b4f2a 15%, transparent);
+  --border-strong: color-mix(in srgb, #6b4f2a 25%, transparent);
+  --header-bg: color-mix(in srgb, #faf6ef 85%, transparent);
+  --card-bg: #faf6ef;
+  --card-hover: color-mix(in srgb, #6aabb8 12%, #faf6ef);
+  --btn-primary-bg: #3d4f5f;
+  --btn-primary-text: #f7f2e8;
+  --footer-quote: #5c5346;
+  --selection-bg: color-mix(in srgb, #6aabb8 35%, transparent);
+}
+
+/* ── Dark academia ── */
+.dark {
+  --bg-base: #1a1410;
+  --bg-surface: #221c16;
+  --bg-elevated: #2e261e;
+  --text-primary: #e8dfd0;
+  --text-muted: #a89880;
+  --accent: #c4a882;
+  --accent-soft: #8b6914;
+  --border: color-mix(in srgb, #c4a882 12%, transparent);
+  --border-strong: color-mix(in srgb, #c4a882 22%, transparent);
+  --header-bg: color-mix(in srgb, #221c16 90%, transparent);
+  --card-bg: #2e261e;
+  --card-hover: color-mix(in srgb, #7a3b3b 15%, #2e261e);
+  --btn-primary-bg: #7a3b3b;
+  --btn-primary-text: #e8dfd0;
+  --footer-quote: #a89880;
+  --selection-bg: color-mix(in srgb, #7a3b3b 40%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--text-primary);
+}
+
+/* Library-by-the-sea background */
+.library-bg {
+  background-color: var(--bg-base);
+  background-image:
+    /* sea glow through tall windows — right side */
+    radial-gradient(ellipse 45% 70% at 95% 30%, color-mix(in srgb, var(--accent-soft) 14%, transparent), transparent),
+    /* warm sunlight — upper left */
+    radial-gradient(ellipse 60% 40% at 5% 0%, color-mix(in srgb, #d9c9a8 20%, transparent), transparent),
+    /* wood shelf shadow bands */
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 118px,
+      color-mix(in srgb, var(--border) 60%, transparent) 118px,
+      color-mix(in srgb, var(--border) 60%, transparent) 120px
+    ),
+    linear-gradient(180deg, var(--bg-base) 0%, var(--bg-elevated) 100%);
+}
+
+.dark .library-bg {
+  background-image:
+    radial-gradient(ellipse 40% 50% at 90% 20%, color-mix(in srgb, #7a3b3b 8%, transparent), transparent),
+    radial-gradient(ellipse 50% 35% at 10% 80%, color-mix(in srgb, #6b7f6a 6%, transparent), transparent),
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 118px,
+      color-mix(in srgb, var(--border) 40%, transparent) 118px,
+      color-mix(in srgb, var(--border) 40%, transparent) 120px
+    ),
+    linear-gradient(180deg, #1a1410 0%, #221c16 100%);
+}
+
+/* Decorative bookshelf spine strip along left edge */
+.shelf-edge {
+  position: relative;
+}
+
+.shelf-edge::before {
+  content: '';
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(
+    180deg,
+    #7a3b3b 0%, #7a3b3b 8%,
+    #3d4f5f 8%, #3d4f5f 16%,
+    #6b7f6a 16%, #6b7f6a 24%,
+    #8b6914 24%, #8b6914 32%,
+    #4a8494 32%, #4a8494 40%,
+    #6b4f2a 40%, #6b4f2a 48%,
+    #7a3b3b 48%, #7a3b3b 56%,
+    #3d4f5f 56%, #3d4f5f 64%,
+    #6b7f6a 64%, #6b7f6a 72%,
+    #8b6914 72%, #8b6914 80%,
+    #4a8494 80%, #4a8494 88%,
+    #6b4f2a 88%, #6b4f2a 100%
+  );
+  opacity: 0.35;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.dark .shelf-edge::before {
+  opacity: 0.25;
+  filter: brightness(0.7);
+}
+
+.wave-divider {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z' fill='%236aabb8' fill-opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+.dark .wave-divider {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z' fill='%23c4a882' fill-opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Semantic utility classes bound to CSS vars */
+.text-themed-primary { color: var(--text-primary); }
+.text-themed-muted { color: var(--text-muted); }
+.bg-themed-surface { background-color: var(--bg-surface); }
+.bg-themed-elevated { background-color: var(--bg-elevated); }
+.bg-themed-card { background-color: var(--card-bg); }
+.border-themed { border-color: var(--border); }
+.border-themed-strong { border-color: var(--border-strong); }
+
+/* ── Solarpunk overgrowth page ── */
+.solarpunk-ecosystem {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, color-mix(in srgb, #1b4332 80%, #0d1f17), #0d1f17),
+    radial-gradient(ellipse 50% 40% at 20% 30%, color-mix(in srgb, #40916c 20%, transparent), transparent),
+    radial-gradient(ellipse 40% 35% at 80% 60%, color-mix(in srgb, #52b788 15%, transparent), transparent),
+    linear-gradient(175deg, #0d1f17 0%, #1b4332 40%, #2d4a3e 100%);
+  color: #e8f0e4;
+}
+
+@keyframes vine-creep {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-4px) scale(1.01); }
+}
+
+@keyframes leaf-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes spore-drift {
+  0% { transform: translate(0, 0); opacity: 0; }
+  20% { opacity: 0.6; }
+  100% { transform: translate(30px, -120px); opacity: 0; }
+}
+
+.animate-vine-creep {
+  animation: vine-creep 8s ease-in-out infinite;
+}
+
+.animate-leaf-sway {
+  animation: leaf-sway 5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.spore {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #74c69d;
+  animation: spore-drift 12s ease-in-out infinite;
+}
+
+.reclaimed-card {
+  background: color-mix(in srgb, #2e261e 70%, #1b4332);
+  border: 1px solid color-mix(in srgb, #52b788 30%, transparent);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.reclaimed-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, color-mix(in srgb, #52b788 8%, transparent), transparent 60%);
+  pointer-events: none;
+}
+
+.overgrown-text {
+  background: linear-gradient(135deg, #e8f0e4 0%, #74c69d 50%, #d4a574 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
