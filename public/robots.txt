@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeanne-evana.github.io/portfolio/sitemap.xml

@@ -7,24 +7,32 @@
   --font-sans: "DM Sans", system-ui, sans-serif;
   --font-display: "Syne", system-ui, sans-serif;
 
-  /* Light academia — sunlit library by the sea */
-  --color-parchment: #f7f2e8;
-  --color-parchment-dark: #ebe3d4;
-  --color-ink: #2c2416;
-  --color-ink-muted: #5c5346;
-  --color-navy: #3d4f5f;
-  --color-navy-light: #526878;
-  --color-sea: #6aabb8;
-  --color-sea-deep: #4a8494;
-  --color-sand: #c4a882;
-  --color-sand-light: #d9c9a8;
-  --color-wood: #8b6914;
-  --color-wood-dark: #6b4f2a;
-  --color-burgundy: #7a3b3b;
-  --color-sage: #6b7f6a;
-  --color-rose: #b8867a;
+  /* ───────────────────────────────
+     Mediterranean Study
+     Light palette
+  ─────────────────────────────── */
 
-  /* Solarpunk ecosystem */
+  --color-parchment: #f9f5ef;
+  --color-paper: #fcfaf6;
+  --color-limestone: #f2ece2;
+
+  --color-ink: #2d2923;
+  --color-ink-muted: #655d52;
+
+  --color-navy: #4d6884;
+  --color-navy-soft: #7d99b0;
+
+  --color-sea: #7da9bc;
+  --color-sea-deep: #587d9b;
+
+  --color-sand: #ccb18d;
+  --color-olive: #7b8566;
+  --color-bronze: #9b7653;
+
+  /* ───────────────────────────────
+     Solarpunk (unchanged)
+  ─────────────────────────────── */
+
   --color-canopy: #1b4332;
   --color-fern: #2d6a4f;
   --color-moss: #40916c;
@@ -36,45 +44,90 @@
   --color-soil: #3d2b1f;
 }
 
-/* ── Light academia (default) ── */
+/* ==================================================
+   LIGHT MODE
+================================================== */
+
 :root {
-  --bg-base: #f7f2e8;
-  --bg-surface: #faf6ef;
-  --bg-elevated: #ebe3d4;
-  --text-primary: #2c2416;
-  --text-muted: #5c5346;
-  --accent: #4a8494;
-  --accent-soft: #6aabb8;
-  --border: color-mix(in srgb, #6b4f2a 15%, transparent);
-  --border-strong: color-mix(in srgb, #6b4f2a 25%, transparent);
-  --header-bg: color-mix(in srgb, #faf6ef 85%, transparent);
-  --card-bg: #faf6ef;
-  --card-hover: color-mix(in srgb, #6aabb8 12%, #faf6ef);
-  --btn-primary-bg: #3d4f5f;
-  --btn-primary-text: #f7f2e8;
-  --footer-quote: #5c5346;
-  --selection-bg: color-mix(in srgb, #6aabb8 35%, transparent);
+  --bg-base: var(--color-parchment);
+  --bg-surface: var(--color-paper);
+  --bg-elevated: var(--color-limestone);
+
+  --text-primary: var(--color-ink);
+  --text-muted: var(--color-ink-muted);
+
+  --accent: var(--color-sea-deep);
+  --accent-soft: var(--color-sea);
+
+  --border: color-mix(in srgb, var(--color-bronze) 14%, transparent);
+  --border-strong: color-mix(in srgb, var(--color-bronze) 24%, transparent);
+
+  --header-bg: color-mix(in srgb, var(--bg-surface) 90%, transparent);
+
+  --card-bg: rgba(252, 250, 246, .78);
+
+  --card-hover: color-mix(
+    in srgb,
+    var(--accent-soft) 10%,
+    var(--bg-surface)
+  );
+
+  --btn-primary-bg: var(--color-navy);
+  --btn-primary-text: var(--color-paper);
+
+  --footer-quote: var(--text-muted);
+
+  --selection-bg: color-mix(
+    in srgb,
+    var(--accent-soft) 30%,
+    transparent
+  );
 }
 
-/* ── Dark academia ── */
+/* ==================================================
+   DARK MODE
+   (Almost unchanged — already beautiful)
+================================================== */
+
 .dark {
   --bg-base: #1a1410;
   --bg-surface: #221c16;
   --bg-elevated: #2e261e;
+
   --text-primary: #e8dfd0;
   --text-muted: #a89880;
+
   --accent: #c4a882;
   --accent-soft: #8b6914;
+
   --border: color-mix(in srgb, #c4a882 12%, transparent);
   --border-strong: color-mix(in srgb, #c4a882 22%, transparent);
+
   --header-bg: color-mix(in srgb, #221c16 90%, transparent);
+
   --card-bg: #2e261e;
-  --card-hover: color-mix(in srgb, #7a3b3b 15%, #2e261e);
+
+  --card-hover: color-mix(
+    in srgb,
+    #7a3b3b 15%,
+    #2e261e
+  );
+
   --btn-primary-bg: #7a3b3b;
   --btn-primary-text: #e8dfd0;
+
   --footer-quote: #a89880;
-  --selection-bg: color-mix(in srgb, #7a3b3b 40%, transparent);
+
+  --selection-bg: color-mix(
+    in srgb,
+    #7a3b3b 40%,
+    transparent
+  );
 }
+
+/* ==================================================
+   GLOBAL
+================================================== */
 
 html {
   scroll-behavior: smooth;
@@ -83,105 +136,290 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
+  font-size: 1.03rem;
+  line-height: 1.8;
+
   color: var(--text-primary);
-  background-color: var(--bg-base);
+  background: var(--bg-base);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.4s ease, color 0.4s ease;
+
+  transition:
+    background-color .45s ease,
+    color .35s ease;
+}
+
+/* Gentle depth */
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: -2;
+
+  background:
+    radial-gradient(circle at 15% 5%,
+      rgba(255,255,255,.45),
+      transparent 38%),
+
+    radial-gradient(circle at 85% 20%,
+      rgba(92,140,170,.08),
+      transparent 35%),
+
+    linear-gradient(
+      180deg,
+      var(--bg-base),
+      var(--bg-surface)
+    );
+}
+
+/* Very subtle paper texture */
+
+body::after {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: -1;
+
+  opacity: .08;
+
+  background-image:
+    radial-gradient(rgba(0,0,0,.035) .45px, transparent .45px);
+
+  background-size: 10px 10px;
 }
 
 ::selection {
-  background-color: var(--selection-bg);
+  background: var(--selection-bg);
   color: var(--text-primary);
 }
 
-/* Library-by-the-sea background */
+/* ==================================================
+   MAIN SITE BACKGROUND
+================================================== */
+
 .library-bg {
-  background-color: var(--bg-base);
-  background-image:
-    /* sea glow through tall windows — right side */
-    radial-gradient(ellipse 45% 70% at 95% 30%, color-mix(in srgb, var(--accent-soft) 14%, transparent), transparent),
-    /* warm sunlight — upper left */
-    radial-gradient(ellipse 60% 40% at 5% 0%, color-mix(in srgb, #d9c9a8 20%, transparent), transparent),
-    /* wood shelf shadow bands */
-    repeating-linear-gradient(
-      180deg,
-      transparent,
-      transparent 118px,
-      color-mix(in srgb, var(--border) 60%, transparent) 118px,
-      color-mix(in srgb, var(--border) 60%, transparent) 120px
+
+  background:
+    radial-gradient(
+      ellipse 65% 45%
+      at 100% 10%,
+      rgba(105,160,190,.06),
+      transparent 70%
     ),
-    linear-gradient(180deg, var(--bg-base) 0%, var(--bg-elevated) 100%);
+
+    radial-gradient(
+      ellipse 50% 35%
+      at 0% 0%,
+      rgba(235,214,178,.22),
+      transparent 75%
+    ),
+
+    linear-gradient(
+      180deg,
+      var(--bg-base),
+      var(--bg-surface)
+    );
+
+  min-height:100vh;
 }
 
-.dark .library-bg {
-  background-image:
-    radial-gradient(ellipse 40% 50% at 90% 20%, color-mix(in srgb, #7a3b3b 8%, transparent), transparent),
-    radial-gradient(ellipse 50% 35% at 10% 80%, color-mix(in srgb, #6b7f6a 6%, transparent), transparent),
-    repeating-linear-gradient(
-      180deg,
-      transparent,
-      transparent 118px,
-      color-mix(in srgb, var(--border) 40%, transparent) 118px,
-      color-mix(in srgb, var(--border) 40%, transparent) 120px
+/* Dark mode remains calm */
+
+.dark .library-bg{
+
+  background:
+
+    radial-gradient(
+      ellipse 60% 45%
+      at 90% 15%,
+      rgba(122,59,59,.10),
+      transparent 70%
     ),
-    linear-gradient(180deg, #1a1410 0%, #221c16 100%);
+
+    linear-gradient(
+      180deg,
+      #1a1410,
+      #221c16
+    );
 }
 
-/* Decorative bookshelf spine strip along left edge */
-.shelf-edge {
+/* ==================================================
+   HEADER
+================================================== */
+
+header{
+
+  backdrop-filter: blur(10px);
+
+  border-bottom:1px solid var(--border);
+
+}
+
+/* ==================================================
+   CARDS
+================================================== */
+
+article,
+
+.bg-themed-card{
+
+  background:var(--card-bg);
+
+  box-shadow:
+
+    0 8px 24px rgba(28,26,22,.035);
+
+  transition:
+
+    transform .28s ease,
+
+    box-shadow .28s ease,
+
+    border-color .28s ease;
+
+}
+
+article:hover,
+
+.bg-themed-card:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:
+
+    0 14px 32px rgba(28,26,22,.06);
+
+}
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+a{
+
+  transition:
+
+    color .25s ease,
+
+    opacity .25s ease;
+
+}
+
+button{
+
+  transition:all .25s ease;
+
+}
+
+button:hover{
+
+  transform:translateY(-1px);
+
+}
+
+/* ==================================================
+   Semantic utility classes
+================================================== */
+
+.text-themed-primary {
+  color: var(--text-primary);
+}
+
+.text-themed-muted {
+  color: var(--text-muted);
+}
+
+.bg-themed-surface {
+  background: var(--bg-surface);
+}
+
+.bg-themed-elevated {
+  background: var(--bg-elevated);
+}
+
+.bg-themed-card {
+  background: var(--card-bg);
+}
+
+.border-themed {
+  border-color: var(--border);
+}
+
+.border-themed-strong {
+  border-color: var(--border-strong);
+}
+
+/* ==================================================
+   Typography rhythm
+================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  max-width: 62ch;
+}
+
+.font-serif {
+  text-wrap: balance;
+}
+
+/* ==================================================
+   Links
+================================================== */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ==================================================
+   Images
+================================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==================================================
+   Cards
+================================================== */
+
+article,
+.bg-themed-card {
+  border-radius: 8px;
+}
+
+/* ==================================================
+   Sections
+================================================== */
+
+section {
   position: relative;
 }
 
-.shelf-edge::before {
-  content: '';
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 6px;
-  background: linear-gradient(
-    180deg,
-    #7a3b3b 0%, #7a3b3b 8%,
-    #3d4f5f 8%, #3d4f5f 16%,
-    #6b7f6a 16%, #6b7f6a 24%,
-    #8b6914 24%, #8b6914 32%,
-    #4a8494 32%, #4a8494 40%,
-    #6b4f2a 40%, #6b4f2a 48%,
-    #7a3b3b 48%, #7a3b3b 56%,
-    #3d4f5f 56%, #3d4f5f 64%,
-    #6b7f6a 64%, #6b7f6a 72%,
-    #8b6914 72%, #8b6914 80%,
-    #4a8494 80%, #4a8494 88%,
-    #6b4f2a 88%, #6b4f2a 100%
-  );
-  opacity: 0.35;
-  z-index: 40;
-  pointer-events: none;
-}
 
-.dark .shelf-edge::before {
-  opacity: 0.25;
-  filter: brightness(0.7);
-}
+/* Don't add a fleuron after the hero */
 
-.wave-divider {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z' fill='%236aabb8' fill-opacity='0.12'/%3E%3C/svg%3E");
-  background-size: 100% 100%;
+section:first-child + section::before {
+  display: none;
 }
-
-.dark .wave-divider {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z' fill='%23c4a882' fill-opacity='0.06'/%3E%3C/svg%3E");
-}
-
-/* Semantic utility classes bound to CSS vars */
-.text-themed-primary { color: var(--text-primary); }
-.text-themed-muted { color: var(--text-muted); }
-.bg-themed-surface { background-color: var(--bg-surface); }
-.bg-themed-elevated { background-color: var(--bg-elevated); }
-.bg-themed-card { background-color: var(--card-bg); }
-.border-themed { border-color: var(--border); }
-.border-themed-strong { border-color: var(--border-strong); }
 
 /* ── Solarpunk overgrowth page ── */
 .solarpunk-ecosystem {

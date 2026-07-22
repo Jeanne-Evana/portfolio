@@ -1,9 +1,9 @@
 import SectionHeading from '../components/SectionHeading'
 
 const links = [
-  { label: 'Email', value: 'Add your email', href: 'mailto:' },
-  { label: 'Academic profile', value: 'Google Scholar / ORCID', href: '#' },
-  { label: 'LinkedIn', value: 'Jeanne Vincendeau', href: '#' },
+  { label: 'Email', value: 'j.vincendeau@studenti.luiss.it', href: 'mailto:j.vincendeau@studenti.luiss.it' },
+  { label: 'Academic profile', value: 'ORCID', href: 'https://orcid.org/0009-0001-6835-5532' },
+  { label: 'LinkedIn', value: 'Jeanne Vincendeau', href: 'https://www.linkedin.com/in/jeanne-vincendeau/' },
 ]
 
 export default function Contact() {
@@ -11,8 +11,8 @@ export default function Contact() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       <SectionHeading
         eyebrow="Contact"
-        title="Let's correspond"
-        subtitle="For collaborations, speaking invitations, media inquiries, or thoughtful conversation — I welcome your note."
+        title="Keep in touch"
+        subtitle="For collaborations, speaking invitations, or getting to know my work better."
       />
 
       <div className="grid lg:grid-cols-2 gap-12">
@@ -43,13 +43,12 @@ export default function Contact() {
         >
           <h2 className="font-serif text-2xl mb-4">A note on collaboration</h2>
           <p className="text-sm leading-relaxed mb-6 opacity-90">
-            I am especially interested in partnerships with scholars across Eurasia,
-            policy practitioners, and organisations working on AI governance, political
-            violence, or multilingual technology policy. If your project touches any of
-            these strands, I would like to hear from you.
+            I am interested in partnerships on global AI governance,
+            AI geopolitics and political violence. If you are a scholar, policy practitioner, or organisation and your project touches any of
+            these strands, I would be delighted to hear from you.
           </p>
           <p className="text-sm italic font-serif opacity-70">
-            Response times vary during fieldwork and teaching terms — thank you for your patience.
+            Response times may vary, thank you for your patience.
           </p>
         </div>
       </div>
