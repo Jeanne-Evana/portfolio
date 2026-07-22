@@ -1,0 +1,17 @@
+/* TEAM */
+
+Name: Jeanne Vincendeau
+Role: Researcher
+
+Site: AI Governance, International Security & Political Violence
+
+Built with:
+React
+TypeScript
+Tailwind CSS
+Vite
+
+Design:
+Created by me with dear ChatGPT
+
+© 2026 Jeanne Vincendeau
