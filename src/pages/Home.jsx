@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import OliveBranches from "../components/OliveBranches"
 
 export default function Home() {
   return (
@@ -72,73 +73,14 @@ export default function Home() {
           {/* Right column */}
           <div className="lg:col-span-5 flex justify-center">
 
-            <div className="relative w-full max-w-md">
-
-              {/* Mediterranean loggia */}
-
-              <svg
-                viewBox="0 0 420 520"
-                className="absolute inset-0 w-full h-full overflow-visible"
-                aria-hidden="true"
-              >
-                <defs>
-
-                  <linearGradient id="seaGradient" x1="0" y1="0" x2="0" y2="1">
-
-                    <stop offset="0%" stopColor="#edf4f7" />
-
-                    <stop offset="65%" stopColor="#dbe9ef" />
-
-                    <stop offset="100%" stopColor="#f8f5ef" />
-
-                  </linearGradient>
-
-                </defs>
-
-                {/* Arch opening */}
-
-                <path
-                  d="
-                    M80 470
-                    L80 170
-                    A130 130 0 0 1 340 170
-                    L340 470
-                  "
-                  fill="url(#seaGradient)"
-                  stroke="rgba(155,118,83,.35)"
-                  strokeWidth="2"
-                />
-
-                {/* Horizon */}
-
-                <line
-                  x1="100"
-                  y1="280"
-                  x2="320"
-                  y2="280"
-                  stroke="rgba(88,125,155,.45)"
-                  strokeWidth="1.5"
-                />
-
-                {/* Sea */}
-
-                <path
-                  d="
-                    M100 286
-                    C150 284 170 290 210 286
-                    C250 282 280 289 320 286
-                  "
-                  stroke="rgba(88,125,155,.35)"
-                  strokeWidth="1.2"
-                  fill="none"
-                />
-
-              </svg>
+          <div className="relative w-full max-w-md">
+            <OliveBranches />
+            <div className="portrait-glow" />
 
               {/* Portrait */}
 
               <div
-                className="relative mx-auto mt-24 w-[78%] aspect-[4/5] overflow-hidden rounded-lg border bg-themed-card"
+                className="relative mx-auto w-[78%] aspect-[4/5] overflow-hidden rounded-lg border bg-themed-card"
                 style={{
                   borderColor: "var(--border-strong)",
                   boxShadow:

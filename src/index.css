@@ -416,10 +416,78 @@ section {
 
 
 /* Don't add a fleuron after the hero */
+/* ==========================================
+   Mediterranean botanical decoration
+========================================== */
 
-section:first-child + section::before {
-  display: none;
+.olive-branch {
+  position: absolute;
+  pointer-events: none;
+  opacity: .18;
+  filter: saturate(.75);
+  animation: oliveFloat 8s ease-in-out infinite;
+  z-index: 2;
 }
+
+.olive-top {
+  width: 190px;
+  top: -55px;
+  left: -70px;
+  transform: rotate(-14deg);
+}
+
+.olive-bottom {
+  width: 200px;
+  right: -80px;
+  bottom: -55px;
+  transform: rotate(18deg);
+  animation-delay: 3s;
+}
+
+@keyframes oliveFloat {
+
+  0%,100%{
+    transform:translateY(0px) rotate(-14deg);
+  }
+
+  50%{
+    transform:translateY(-6px) rotate(-11deg);
+  }
+
+}
+
+.olive-bottom{
+  animation-name:oliveFloatBottom;
+}
+
+@keyframes oliveFloatBottom{
+
+  0%,100%{
+    transform:translateY(0px) rotate(18deg);
+  }
+
+  50%{
+    transform:translateY(6px) rotate(21deg);
+  }
+
+}
+
+/* Mediterranean sea light */
+
+.portrait-glow{
+  position:absolute;
+  inset:-35px;
+  border-radius:50%;
+  z-index:0;
+  background:radial-gradient(
+    circle,
+    rgba(120,180,205,.18),
+    rgba(120,180,205,.08) 45%,
+    transparent 75%
+  );
+}
+
+
 
 /* ── Solarpunk overgrowth page ── */
 .solarpunk-ecosystem {
