@@ -21,8 +21,8 @@ const researchAreas = [
     area: 'International Relations',
     topics: [
       'Global governance from cooperation to competition',
-      'Multilingual and multicultural perspectives from middle powers and Global South countries',
-      'Collaboration portfolio with Asian scholars; field experience from a year living in China',
+      'Multilingual and multicultural perspectives',
+      'Pan-Asian collaboration portfolio, field experience in China',
     ],
   },
 ]
@@ -30,10 +30,11 @@ const researchAreas = [
 const publications = [
   {
     year: '2026',
-    title: 'Conference paper, ECPR General Conference',
-    venue: 'European Consortium for Political Research',
+    title: 'Towards a Moral Realist Alternative Order: Chinese and Russian Approaches to the Syrian and Sudanese Civil Wars',
+    venue: 'General Conference ECPR',
     type: 'Conference',
     href: 'https://ecpr.eu/Events/Event/PaperDetails/87440',
+    note: 'Conference paper',
   },
   {
     year: '2025',
@@ -57,7 +58,7 @@ const publications = [
     venue: 'Apart Research Global South Hackathon',
     type: 'Research',
     href: 'https://apartresearch.com/project/traduttore-traditore-llm-languagedependent-safety-answers-in-community-contexts-d8n7',
-    note: 'Co-written pilot research, June 2026',
+    note: 'Co-written pilot research',
   },
 ]
 
@@ -79,7 +80,7 @@ export default function Research() {
     <div className="max-w-5xl mx-auto px-6 py-16">
       <SectionHeading
         eyebrow="Research"
-        title="Publications & projects"
+        title="Publications & Projects"
         subtitle="Work at the intersection of AI governance, political violence, and global governance, grounded in a plurality of Eurasian perspectives."
       />
 

@@ -57,7 +57,7 @@ export default function Layout() {
       <footer className="wave-divider border-t border-themed mt-auto">
         <div className="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm font-serif italic" style={{ color: 'var(--footer-quote)' }}>
-            From a reading room overlooking the sea — notes on power, violence, and the worlds we might yet grow.
+          Cedant arma togae, concedat laurea linguae.
           </p>
           <SurpriseLink />
         </div>
