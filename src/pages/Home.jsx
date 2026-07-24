@@ -3,7 +3,14 @@ import OliveBranches from "../components/OliveBranches"
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+
+      <img
+        src={`${import.meta.env.BASE_URL}sea-watercolor.png`}
+        alt=""
+        aria-hidden
+        className="sea-background"
+      />
 
       {/* =========================
           Hero

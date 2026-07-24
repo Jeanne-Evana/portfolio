@@ -488,6 +488,46 @@ section {
 }
 
 
+/* ===== Mediterranean sea ===== */
+
+.sea-background{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.12;
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+
+  animation: drift 20s ease-in-out infinite alternate;
+
+  /* Fade in gently from the middle of the page */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 35%,
+    rgba(0,0,0,.35) 55%,
+    black 75%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 35%,
+    rgba(0,0,0,.35) 55%,
+    black 75%
+  );
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
 
 /* ── Solarpunk overgrowth page ── */
 .solarpunk-ecosystem {
