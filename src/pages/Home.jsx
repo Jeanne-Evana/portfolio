@@ -132,7 +132,7 @@ export default function Home() {
             {[
               {
                 title: "AI Governance",
-                desc: "Concentration of power in Global AI Governance, AI for diplomacy, and multilingual safety benchmarks. I am asking who governs and in whose language.",
+                desc: "Concentration of power in Global AI Governance, AI for diplomacy, and multilingual safety benchmarks. Who governs and in whose language.",
               },
               {
                 title: "Political Violence",
