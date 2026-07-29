@@ -9,10 +9,10 @@ const portfolioItems = [
     link: "https://localpathways.org/blog/2025/8/13/plastexpo-202",
   },
   {
-    title: "Local Pathways Fellow",
-    medium: "International programme · Rome · 2025",
-    desc: "Working on environmental policy, community-building, and inclusive governance through international collaboration and local action.",
-    link: "https://localpathways.org/2025",
+    title: "Alternative Solutions to UBI",
+    medium: "Research proposal · 2026",
+    desc: "Exploring a world with AI-enabled massive unemployment: social stewardship and community participation and contribution.",
+    file: "/Alternative Solutions to UBI.pdf",
   },
   {
     title: "St. Gallen Symposium Essay",
@@ -202,38 +202,89 @@ export default function Solarpunk() {
             ))}
           </div>
         </section>
-                {/* Three principles */}
-                <section className="grid sm:grid-cols-3 gap-6 mb-16">
-          {[
-            {
-              label: 'Partnership',
-              text: 'Civilisation and ecology are not opposites. The most durable technologies are those that feed the systems they inhabit.',
-            },
-            {
-              label: 'Plurality',
-              text: 'Intelligence grows in many soils: linguistic, cultural, ecological. A forest thinks differently than a factory.',
-            },
-            {
-              label: 'Abundance',
-              text: 'Solarpunk refuses scarcity as destiny. The future can be lush, shared, and overgrown with care.',
-            },
-          ].map(({ label, text }) => (
-            <div
-              key={label}
-              className="p-5 rounded-lg border border-fern/30 bg-canopy/40 relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-leaf via-bloom to-moss opacity-60" />
+          {/* Communities I've Helped Grow */}
 
-              <h4 className="font-display text-base font-semibold text-leaf-light mb-2">
-                {label}
-              </h4>
+          <section className="mb-20">
 
-              <p className="text-sm text-[#a8c4a0] leading-relaxed">
-                {text}
-              </p>
+            <h3 className="font-display text-2xl text-leaf-light mb-3">
+              Communities I Helped Grow
+            </h3>
+
+            <p className="text-[#b4c8b0] leading-relaxed max-w-3xl mb-12">
+              Solarpunk is not only something to be writing about. With patience and care, 
+              I cultivated mutual learning and community-building.
+            </p>
+
+            <h4 className="font-display text-xl text-leaf-light mb-6">
+              🌿 Currently Growing
+            </h4>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+              {[
+                ["Horizon AGI - Fieldbuilding", "Co-founder · France"],
+                ["AIxPhilo - Reading Group", "Facilitator · Remote"],
+                ["AIxBio Africa - Fellowship", "Mentor · Remote"],
+              ].map(([title, role]) => (
+
+                <article
+                  key={title}
+                  className="relative reclaimed-card rounded-lg p-6 hover:border-leaf/50 transition-all duration-300 group"
+                >
+
+                  <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-leaf via-bloom to-moss opacity-60 rounded-t-lg" />
+
+                  <h5 className="font-display text-xl text-[#e8f0e4] mb-3 group-hover:text-leaf-light transition-colors">
+                    {title}
+                  </h5>
+
+                  <p className="text-[#bdd4b6] leading-relaxed">
+                    {role}
+                  </p>
+
+                </article>
+
+              ))}
+
             </div>
-          ))}
-        </section>
+
+            <h4 className="font-display text-xl text-[#9fbf94] mb-6">
+              🌱 Roots
+            </h4>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {[
+                ["Local Pathways", "Fellow · Rome"],
+                ["INA Journal", "Writer · LUISS Rome"],
+                ["LUISS Language Café", "Volunteer · Rome"],
+                ["Ordre of Malta France", "Communication · Marauder · Paris"],
+                ["ASDV Debate Society", "Social Commissioner · Amsterdam"],
+                ["Interact JA", "Co-founder · President · France"],
+              ].map(([title, role]) => (
+
+                <article
+                  key={title}
+                  className="relative reclaimed-card rounded-lg p-6 opacity-75 hover:opacity-100 transition-all duration-300 group"
+                >
+
+                  <div className="absolute top-0 left-0 h-1 w-full bg-[#6e8b63] opacity-40 rounded-t-lg" />
+
+                  <h5 className="font-display text-xl text-[#dce8d7] mb-3 group-hover:text-leaf-light transition-colors">
+                    {title}
+                  </h5>
+
+                  <p className="text-[#a6b89f] leading-relaxed">
+                    {role}
+                  </p>
+
+                </article>
+
+              ))}
+
+            </div>
+
+          </section>
 
         <footer className="text-center pt-8 border-t border-fern/20">
           <p className="font-serif text-sm text-[#7a9a72] italic">

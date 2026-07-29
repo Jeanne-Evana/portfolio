@@ -16,7 +16,7 @@ export default function Layout() {
         className="border-b border-themed sticky top-0 z-50 backdrop-blur-sm"
         style={{ backgroundColor: 'var(--header-bg)' }}
       >
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <NavLink to="/" className="group min-w-0">
             <span className="font-serif text-lg sm:text-2xl font-semibold text-themed-primary tracking-tight whitespace-nowrap group-hover:text-sea-deep dark:group-hover:text-sand transition-colors">
               Jeanne <span className="text-sea-deep dark:text-sand/80">容慧</span> Vincendeau
@@ -24,7 +24,7 @@ export default function Layout() {
 
           </NavLink>
 
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
+          <div className="flex items-center justify-between w-full sm:w-auto gap-2 sm:gap-4 shrink-0">
             <nav className="flex items-center gap-1 sm:gap-5">
               {navLinks.map(({ to, label, end }) => (
                 <NavLink
