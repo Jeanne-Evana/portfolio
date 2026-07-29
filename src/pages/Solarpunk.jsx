@@ -94,7 +94,7 @@ export default function Solarpunk() {
       <main className="relative z-10 max-w-5xl mx-auto px-6 py-16 sm:py-20">
 
         <section className="mb-20 max-w-3xl">
-          <p className="font-display text-xs uppercase tracking-[0.25em] text-leaf-light mb-5">
+          <p className="font-display text-xs uppercase tracking-[0.25em] text-leaf-light mb-5 whitespace-nowrap">
             Solarpunk · Community · Sustainability
           </p>
 

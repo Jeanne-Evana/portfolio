@@ -24,7 +24,7 @@ export default function Home() {
 
           <div className="lg:col-span-7">
 
-            <p className="text-xs uppercase tracking-[0.3em] text-sea-deep dark:text-sand font-medium mb-6">
+            <p className="text-xs uppercase tracking-[0.3em] text-sea-deep dark:text-sand font-medium mb-6 whitespace-nowrap">
               Research • Policy • Communication
             </p>
 
