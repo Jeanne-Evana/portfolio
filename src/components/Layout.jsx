@@ -18,7 +18,7 @@ export default function Layout() {
       >
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <NavLink to="/" className="group min-w-0">
-            <span className="font-serif text-xl sm:text-2xl font-semibold text-themed-primary tracking-tight group-hover:text-sea-deep dark:group-hover:text-sand transition-colors">
+            <span className="font-serif text-lg sm:text-2xl font-semibold text-themed-primary tracking-tight whitespace-nowrap group-hover:text-sea-deep dark:group-hover:text-sand transition-colors">
               Jeanne <span className="text-sea-deep dark:text-sand/80">容慧</span> Vincendeau
             </span>
 

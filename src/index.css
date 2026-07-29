@@ -438,7 +438,7 @@ section {
 
 .olive-bottom {
   width: 200px;
-  right: -25px;
+  right: -15px;
   bottom: -55px;
   transform: rotate(18deg);
   animation-delay: 3s;
@@ -487,45 +487,41 @@ section {
   );
 }
 
+/* Mediterranean sea atmosphere */
 
-/* ===== Mediterranean sea ===== */
-
-.sea-background{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  opacity: 0.12;
-  filter: blur(2px);
-  pointer-events: none;
-  z-index: 0;
-
-  animation: drift 20s ease-in-out infinite alternate;
-
-  /* Fade in gently from the middle of the page */
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 35%,
-    rgba(0,0,0,.35) 55%,
-    black 75%
-  );
-
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 35%,
-    rgba(0,0,0,.35) 55%,
-    black 75%
-  );
+.sea-section {
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes drift {
+.sea-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/sea-watercolor.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+
+  opacity: 0.40;
+
+  animation: seaDrift 24s ease-in-out infinite alternate;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sea-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes seaDrift {
   from {
-    transform: translateX(-10px);
+    transform: translateX(-12px);
   }
   to {
-    transform: translateX(10px);
+    transform: translateX(12px);
   }
 }
 

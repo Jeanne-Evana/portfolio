@@ -95,7 +95,7 @@ export default function Solarpunk() {
 
         <section className="mb-20 max-w-3xl">
           <p className="font-display text-xs uppercase tracking-[0.25em] text-leaf-light mb-5 whitespace-nowrap">
-            Solarpunk · Community · Sustainability
+            Innovation · Community · Durability
           </p>
 
           <h2 className="font-display text-4xl sm:text-5xl font-bold leading-tight mb-6 text-[#e8f0e4]">

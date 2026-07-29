@@ -5,13 +5,6 @@ export default function Home() {
   return (
     <div className="relative">
 
-      <img
-        src={`${import.meta.env.BASE_URL}sea-watercolor.png`}
-        alt=""
-        aria-hidden
-        className="sea-background"
-      />
-
       {/* =========================
           Hero
       ========================== */}
@@ -113,7 +106,7 @@ export default function Home() {
       ========================== */}
 
 <section
-        className="border-y border-themed"
+        className="border-y border-themed sea-section"
         style={{ backgroundColor: "var(--bg-elevated)" }}
       >
         <div className="max-w-6xl mx-auto px-6 py-24">
