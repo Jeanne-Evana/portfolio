@@ -106,15 +106,13 @@ export default function Solarpunk() {
           </h2>
 
           <p className="text-[#c8d8c0] text-lg leading-relaxed mb-6">
-            This is the other side of my work, worldbuilding. Here,
-            tropical vegetation reclaims the page. Technology is not a machine separate
-            from nature but a participant in an ecosystem: intelligence rooted in soil,
-            water, and community rather than extracted from them.
+            This is the worldbuilding side. No dichotomy between technology
+            and nature. Intelligence is rooted in soil,
+            water and community, not extracted.
           </p>
 
           <p className="text-[#a8c4a0] text-base leading-relaxed italic font-serif">
-            Solarpunk asks us to imagine abundance. I ask what that means for AI, when
-            algorithms learn from forests, diplomacy happens under canopies, and the
+            Solarpunk asks us to imagine abundance. Algorithms learn from forests, diplomacy happens under canopies, and the
             future is overgrown with possibility.
           </p>
         </section>
@@ -131,17 +129,15 @@ export default function Solarpunk() {
 
             <div className="grid sm:grid-cols-2 gap-6 relative z-10">
               <p className="text-sm text-[#c8d8c0] leading-relaxed">
-                The dominant metaphor treats artificial intelligence as a separate
-                machine: sealed, extractive, indifferent to the world it models.
-                Solarpunk offers another side: systems symbiose with their
+                Artificial intelligence cannot be sealed and extractive.
+                New systems could be designed to symbiose with their
                 environment, draw from local knowledge, and give back as
                 they grow.
               </p>
 
               <p className="text-sm text-[#c8d8c0] leading-relaxed">
-                These pieces explore what governance, diplomacy, and safety might look
-                like when we refuse the separation of nature and civilisation, when the
-                page itself is invaded by the green, insistent claim that the future is
+                These pieces are exploratory: what governance, diplomacy, and safety might look
+                like when we refuse the separation of nature and civilisation. I am insistently claiming that the future is
                 alive.
               </p>
             </div>
@@ -211,7 +207,7 @@ export default function Solarpunk() {
             </h3>
 
             <p className="text-[#b4c8b0] leading-relaxed max-w-3xl mb-12">
-              Solarpunk is not only something to be writing about. With patience and care, 
+              Solarpunk is not only something to be written about. With patience and care, 
               I cultivated mutual learning and community-building.
             </p>
 
@@ -222,15 +218,32 @@ export default function Solarpunk() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
 
               {[
-                ["Horizon AGI - Fieldbuilding", "Co-founder · France"],
-                ["AIxPhilo - Reading Group", "Facilitator · Remote"],
-                ["AIxBio Africa - Fellowship", "Mentor · Remote"],
-              ].map(([title, role]) => (
+                {
+                  title: "Horizon AGI - Fieldbuilding",
+                  role: "Co-founder · France",
+                  link: "https://arthdav38.github.io/horizon-agi/",
+                },
+                {
+                  title: "AIxPhilo - Reading Group",
+                  role: "Facilitator · Remote",
+                  link: "https://nous-ai-philosophy.notion.site/AI-Safety-Philosophy-Reading-Group-38bdd69661e980b68450e66c00652324",
+                },
+                {
+                  title: "AIxBio Africa - Fellowship",
+                  role: "Mentor · Remote",
+                  link: "https://aixbio-africa.vercel.app/",
+                },
+              ].map(({ title, role, link }) => (
 
-                <article
-                  key={title}
-                  className="relative reclaimed-card rounded-lg p-6 hover:border-leaf/50 transition-all duration-300 group"
-                >
+              <a
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group"
+              >
+
+                <article className="relative reclaimed-card rounded-lg p-6 hover:border-leaf/50 transition-all duration-300 hover:-translate-y-1">
 
                   <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-leaf via-bloom to-moss opacity-60 rounded-t-lg" />
 
@@ -242,7 +255,13 @@ export default function Solarpunk() {
                     {role}
                   </p>
 
+                  <span className="inline-block mt-5 text-leaf-light group-hover:text-bloom">
+                    Visit →
+                  </span>
+
                 </article>
+
+              </a>
 
               ))}
 
@@ -254,19 +273,48 @@ export default function Solarpunk() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-              {[
-                ["Local Pathways", "Fellow · Rome"],
-                ["INA Journal", "Writer · LUISS Rome"],
-                ["LUISS Language Café", "Volunteer · Rome"],
-                ["Ordre of Malta France", "Communication · Marauder · Paris"],
-                ["ASDV Debate Society", "Social Commissioner · Amsterdam"],
-                ["Interact JA", "Co-founder · President · France"],
-              ].map(([title, role]) => (
+             {[
+                {
+                  title: "Local Pathways",
+                  role: "Fellow · Rome",
+                  link: "https://localpathways.org/2025",
+                },
+                {
+                  title: "INA Journal",
+                  role: "Writer · LUISS Rome",
+                  link: "https://www.instagram.com/inajournalluiss/",
+                },
+                {
+                  title: "LUISS Language Café",
+                  role: "Volunteer · Rome",
+                  link: "https://www.instagram.com/luisslanguagecafe/",
+                },
+                {
+                  title: "Ordre of Malta France",
+                  role: "Communication · Marauder · Paris",
+                  link: "https://www.ordredemaltefrance.org/",
+                },
+                {
+                  title: "ASDV Debate Society",
+                  role: "Social Commissioner · Amsterdam",
+                  link: "https://asdvbonaparte.nl/en/",
+                },
+                {
+                  title: "Interact JA",
+                  role: "Co-founder · President · France",
+                  link: "https://www.facebook.com/ja.interact/",
+                },
+              ].map(({ title, role, link }) => (
 
-                <article
-                  key={title}
-                  className="relative reclaimed-card rounded-lg p-6 opacity-75 hover:opacity-100 transition-all duration-300 group"
-                >
+              <a
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block group opacity-75 hover:opacity-100"
+              >
+
+                <article className="relative reclaimed-card rounded-lg p-6 transition-all duration-300 hover:-translate-y-1">
 
                   <div className="absolute top-0 left-0 h-1 w-full bg-[#6e8b63] opacity-40 rounded-t-lg" />
 
@@ -278,10 +326,15 @@ export default function Solarpunk() {
                     {role}
                   </p>
 
+                  <span className="inline-block mt-5 text-[#9fbf94] group-hover:text-leaf-light">
+                    Visit →
+                  </span>
+
                 </article>
 
-              ))}
+              </a>
 
+              ))}
             </div>
 
           </section>

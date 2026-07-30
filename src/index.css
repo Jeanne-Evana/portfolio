@@ -498,7 +498,7 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/sea-watercolor.png");
+  background-image: url("./sea-watercolor.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
@@ -509,6 +509,24 @@ section {
 
   pointer-events: none;
   z-index: 0;
+}
+
+/* Remove Mediterranean sea in dark mode */
+
+.dark .sea-section::before {
+  display: none;
+}
+
+/* Add subtle old-library texture */
+
+.dark .library-bg {
+  background:
+    linear-gradient(rgba(10, 8, 6, .82), rgba(10, 8, 6, .82)),
+    url("/library-texture.png");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .sea-section > * {
