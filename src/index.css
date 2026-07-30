@@ -497,19 +497,31 @@ section {
 .sea-section::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("./sea-watercolor.png");
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 240px;
+
+  background-image: url("/sea-watercolor.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;
 
-  opacity: 0.40;
+  opacity: 0.6;
 
   animation: seaDrift 24s ease-in-out infinite alternate;
 
   pointer-events: none;
   z-index: 0;
 }
+
+.sea-section > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* Remove Mediterranean sea in dark mode */
 
