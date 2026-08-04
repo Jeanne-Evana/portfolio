@@ -255,10 +255,6 @@ export default function Solarpunk() {
                     {role}
                   </p>
 
-                  <span className="inline-block mt-5 text-leaf-light group-hover:text-bloom">
-                    Visit →
-                  </span>
-
                 </article>
 
               </a>
@@ -325,10 +321,6 @@ export default function Solarpunk() {
                   <p className="text-[#a6b89f] leading-relaxed">
                     {role}
                   </p>
-
-                  <span className="inline-block mt-5 text-[#9fbf94] group-hover:text-leaf-light">
-                    Visit →
-                  </span>
 
                 </article>
 

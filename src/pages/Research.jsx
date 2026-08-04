@@ -30,6 +30,14 @@ const researchAreas = [
 const publications = [
   {
     year: '2026',
+    title: 'A Blackout During French Presidential Elections: AI Secret Loyalties and Cooptation',
+    venue: 'Apart Research Secret Loyalties',
+    type: 'Research',
+    href: 'https://apartresearch.com/project/a-blackout-during-french-presidential-elections-ai-secret-loyalties-and-cooptation-tjaw',
+    note: 'Scenario writing',
+  },
+  {
+    year: '2026',
     title: 'Towards a Moral Realist Alternative Order: Chinese and Russian Approaches to the Syrian and Sudanese Civil Wars',
     venue: 'General Conference ECPR',
     type: 'Conference',
