@@ -11,7 +11,7 @@ export default function Home() {
 
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-24">
 
-        <div className="grid lg:grid-cols-12 gap-20 items-center">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
 
           {/* Left column */}
 
@@ -73,7 +73,7 @@ export default function Home() {
           {/* Right column */}
           <div className="lg:col-span-5 flex justify-center">
 
-          <div className="relative w-full max-w-md">
+          <div className="relative w-full max-w-md overflow-hidden mx-auto">
             <OliveBranches />
             <div className="portrait-glow" />
 

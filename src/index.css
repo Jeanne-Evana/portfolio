@@ -150,6 +150,11 @@ body {
     color .35s ease;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 /* Gentle depth */
 
 body::before {
