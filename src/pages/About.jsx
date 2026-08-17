@@ -78,6 +78,8 @@ export default function About() {
                 Pilot Mangrove Initiative
                 <br />
                 KTBU Collaborator
+                <br />
+                ITU U4SSC Working Group 1
               </li>
             </ul>
           </div>

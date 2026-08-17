@@ -192,7 +192,7 @@ export default function Solarpunk() {
 
                 {file && (
                   <a
-                    href={`${import.meta.env.BASE_URL}${file.replace(/^\//, "")}`}
+                    href={`${import.meta.env.BASE_URL}${file.replace(/^\/+/, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-5 text-leaf-light hover:text-bloom transition-colors"
@@ -233,7 +233,7 @@ export default function Solarpunk() {
                 {
                   title: "Horizon AGI - Fieldbuilding",
                   role: "Co-founder · France",
-                  link: "https://arthdav38.github.io/horizon-agi/",
+                  link: "https://www.horizonagi.fr/",
                 },
                 {
                   title: "AIxPhilo - Reading Group",
