@@ -1,7 +1,7 @@
 import SectionHeading from '../components/SectionHeading'
 
 const links = [
-  { label: 'Email', value: 'jmjvincendeau@gmail.com', href: 'mailto:j.vincendeau@studenti.luiss.it' },
+  { label: 'Email', value: 'jmjvincendeau@gmail.com', href: 'mailto:jmjvincendeau@gmail.com' },
   { label: 'Academic profile', value: 'ORCID', href: 'https://orcid.org/0009-0001-6835-5532' },
   { label: 'LinkedIn', value: 'Jeanne Vincendeau', href: 'https://www.linkedin.com/in/jeanne-vincendeau/' },
 ]

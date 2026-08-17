@@ -440,7 +440,7 @@ section {
   width: 200px;
   right: 0px;
   bottom: -55px;
-  transform: rotate(18deg);
+  transform: rotate(-50deg);
 }
 
 @keyframes oliveFloat {

@@ -38,7 +38,7 @@ const publications = [
   },
   {
     year: '2026',
-    title: 'Towards a Moral Realist Alternative Order: Chinese and Russian Approaches to the Syrian and Sudanese Civil Wars',
+    title: 'Towards a Moral Realist Order: Chinese and Russian Approaches to the Syrian and Sudanese Civil Wars',
     venue: 'General Conference ECPR',
     type: 'Conference',
     href: 'https://ecpr.eu/Events/Event/PaperDetails/87440',
@@ -54,9 +54,17 @@ const publications = [
   },
   {
     year: '2026',
+    title: 'A Glimpse into the Future, Or How to Treat AI with Due Empathy',
+    venue: 'Apart Research Digital Minds',
+    type: 'Essay',
+    href: 'https://docs.google.com/document/d/1Z_vqBXKKIHiU6czUCBkHw6XY3qXkGwm8VO9eG7LjZJA/edit?usp=sharing',
+    note: 'Interdisciplinary commentary',
+  },
+  {
+    year: '2026',
     title: 'A Blackout During French Presidential Elections: AI Secret Loyalties and Cooptation',
     venue: 'Apart Research Secret Loyalties',
-    type: 'Research',
+    type: 'Essay',
     href: 'https://apartresearch.com/project/a-blackout-during-french-presidential-elections-ai-secret-loyalties-and-cooptation-tjaw',
     note: 'Scenario writing',
   },

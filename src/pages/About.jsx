@@ -93,10 +93,10 @@ export default function About() {
             <ul className="space-y-4 text-sm text-themed-muted">
               <li>
                 <span className="block text-themed-primary font-medium">
-                Double MA International Relations
+                Dual MA International Relations
                 </span>
 
-                China Foreign Affairs University (Beijing), 2026
+                CFAU (Beijing), 2026
                 <br />
                 LUISS Guido Carli (Rome), 2026
               </li>

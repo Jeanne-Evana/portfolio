@@ -73,7 +73,7 @@ export default function Home() {
           {/* Right column */}
           <div className="lg:col-span-5 flex justify-center">
 
-          <div className="relative w-full max-w-md overflow-hidden mx-auto">
+          <div className="relative w-full max-w-md overflow-visible mx-auto">
             <OliveBranches />
             <div className="portrait-glow" />
 
