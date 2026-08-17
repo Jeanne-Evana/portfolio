@@ -6,7 +6,7 @@ const portfolioItems = [
     title: "Cosmos Proposal 2026",
     medium: "Application · Philosopher Builder Grant · 2026",
     desc: "Multilingual application to monitor and counter personal AI use, dependency and assessing levels of cognitive offloading.",
-    link: "/Cosmos Grant.pdf",
+    file: "/Cosmos Grant.pdf",
   },
   {
     title: "PlastExpo 2025",
@@ -36,7 +36,7 @@ const portfolioItems = [
     title: "AI dependency 2026",
     medium: "Commentary · Sino-EU AI Youth Panel · 2026",
     desc: "Reflection on the misplacement of AI risks for youth cognition: AI literacy is distinct from digital media literacy.",
-    link: "/Cognitive Offloading.pdf",
+    file: "/Cognitive Offloading.pdf",
   },
 ]
 
