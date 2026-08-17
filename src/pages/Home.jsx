@@ -3,7 +3,7 @@ import OliveBranches from "../components/OliveBranches"
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative overflow-visible">
 
       {/* =========================
           Hero
