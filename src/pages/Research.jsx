@@ -30,11 +30,11 @@ const researchAreas = [
 const publications = [
   {
     year: '2026',
-    title: 'A Blackout During French Presidential Elections: AI Secret Loyalties and Cooptation',
-    venue: 'Apart Research Secret Loyalties',
-    type: 'Research',
-    href: 'https://apartresearch.com/project/a-blackout-during-french-presidential-elections-ai-secret-loyalties-and-cooptation-tjaw',
-    note: 'Scenario writing',
+    title: 'Sino-US AI Geopolitical Game Theory',
+    venue: 'The Loop by ECPR',
+    type: 'Policy',
+    href: 'https://theloop.ecpr.eu/sino-us-ai-geopolitical-game-theory/',
+    note: 'Policy commentary',
   },
   {
     year: '2026',
@@ -54,11 +54,11 @@ const publications = [
   },
   {
     year: '2026',
-    title: 'Sino-US AI Geopolitical Game Theory',
-    venue: 'The Loop by ECPR',
-    type: 'Policy',
-    href: 'https://theloop.ecpr.eu/sino-us-ai-geopolitical-game-theory/',
-    note: 'Policy commentary',
+    title: 'A Blackout During French Presidential Elections: AI Secret Loyalties and Cooptation',
+    venue: 'Apart Research Secret Loyalties',
+    type: 'Research',
+    href: 'https://apartresearch.com/project/a-blackout-during-french-presidential-elections-ai-secret-loyalties-and-cooptation-tjaw',
+    note: 'Scenario writing',
   },
   {
     year: '2026',

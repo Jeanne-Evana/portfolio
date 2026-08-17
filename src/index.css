@@ -430,16 +430,16 @@ section {
 }
 
 .olive-top {
-  width: 170px;
-  top: -25px;
-  left: -30px;
+  width: 190px;
+  top: -55px;
+  left: -70px;
   transform: rotate(-14deg);
 }
 
 .olive-bottom {
-  width: 170px;
-  right: -20px;
-  bottom: -25px;
+  width: 200px;
+  right: 0px;
+  bottom: -55px;
   transform: rotate(18deg);
 }
 
@@ -619,20 +619,4 @@ section {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@media (max-width: 768px) {
-
-  .olive-top {
-    width: 110px;
-    top: -10px;
-    left: -8px;
-  }
-
-  .olive-bottom {
-    width: 110px;
-    right: -8px;
-    bottom: -10px;
-  }
-
 }
