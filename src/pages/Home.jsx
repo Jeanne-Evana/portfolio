@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className="leading-[1.02] mb-8">
 
               <span className="block font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold text-themed-primary">
-                Governance of new technologies
+                AI Governance
               </span>
 
               <span className="block mt-5 font-serif italic text-3xl sm:text-4xl text-sea-deep dark:text-sand font-normal">
@@ -33,17 +33,10 @@ export default function Home() {
 
             </h1>
 
-            <p className="text-xl text-themed-muted leading-relaxed max-w-2xl mb-10">
-              Understand how intelligent technologies shape political power and ensure
-              they support the creation of a better future for society.
-            </p>
-
             <p className="text-base text-themed-primary/90 leading-loose max-w-2xl mb-12">
-              I am a researcher working at the intersection of artificial intelligence,
-              governance, and international security. My work explores how emerging
-              technologies reshape political decision-making, diplomacy and conflict,
-              with a particular interest in AI governance, strategic competition and
-              responsible innovation.
+              I am working at the intersection of political violence and AI governance.
+              My research focuses on how emerging technologies reshape international relations,
+              with an interest in competition and responsible innovation.
             </p>
 
             <div className="flex flex-wrap gap-4">
