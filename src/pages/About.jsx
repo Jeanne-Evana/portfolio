@@ -20,17 +20,13 @@ export default function About() {
             Languages
           </h2>
 
-          <p className="text-sm text-themed-muted leading-relaxed">
-            🇫🇷 French
-            <br />
-            🇬🇧 English
-            <br />
-            🇪🇸 Spanish
-            <br />
-            🇮🇹 Italian
-            <br />
-            🇨🇳 Mandarin
-          </p>
+          <ul className="text-sm text-themed-muted leading-relaxed space-y-1 list-none">
+            <li><span aria-hidden="true">🇫🇷</span> French</li>
+            <li><span aria-hidden="true">🇬🇧</span> English</li>
+            <li><span aria-hidden="true">🇪🇸</span> Spanish</li>
+            <li><span aria-hidden="true">🇮🇹</span> Italian</li>
+            <li><span aria-hidden="true">🇨🇳</span> Mandarin</li>
+          </ul>
         </div>
 
         {/* Affiliations */}

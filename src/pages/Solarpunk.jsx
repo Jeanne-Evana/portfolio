@@ -50,37 +50,39 @@ const spores = Array.from({ length: 12 }, (_, i) => ({
 export default function Solarpunk() {
   return (
     <div className="solarpunk-ecosystem min-h-screen relative overflow-hidden">
-      <CanopyTop />
-      <RootFloor />
+      <div aria-hidden="true">
+        <CanopyTop />
+        <RootFloor />
 
-      <VineBorder className="left-0 top-20 h-[70vh] w-16 sm:w-24 animate-vine-creep opacity-80" />
-      <VineBorder
-        className="right-0 top-32 h-[60vh] w-16 sm:w-24 scale-x-[-1] animate-vine-creep opacity-70"
-        style={{ animationDelay: '2s' }}
-      />
-
-      <LeafCluster className="absolute top-40 left-[8%] animate-leaf-sway opacity-60 hidden sm:block" />
-      <LeafCluster
-        className="absolute top-64 right-[6%] animate-leaf-sway opacity-50 hidden sm:block"
-        style={{ animationDelay: '1.5s' }}
-      />
-      <LeafCluster
-        className="absolute bottom-48 left-[12%] animate-leaf-sway opacity-40"
-        style={{ animationDelay: '0.8s' }}
-      />
-
-      {spores.map(({ id, left, delay, duration }) => (
-        <span
-          key={id}
-          className="spore"
-          style={{
-            left,
-            bottom: `${20 + (id % 5) * 10}%`,
-            animationDelay: delay,
-            animationDuration: duration,
-          }}
+        <VineBorder className="left-0 top-20 h-[70vh] w-16 sm:w-24 animate-vine-creep motion-reduce:animate-none opacity-80" />
+        <VineBorder
+          className="right-0 top-32 h-[60vh] w-16 sm:w-24 scale-x-[-1] animate-vine-creep motion-reduce:animate-none opacity-70"
+          style={{ animationDelay: '2s' }}
         />
-      ))}
+
+        <LeafCluster className="absolute top-40 left-[8%] animate-leaf-sway motion-reduce:animate-none opacity-60 hidden sm:block" />
+        <LeafCluster
+          className="absolute top-64 right-[6%] animate-leaf-sway motion-reduce:animate-none opacity-50 hidden sm:block"
+          style={{ animationDelay: '1.5s' }}
+        />
+        <LeafCluster
+          className="absolute bottom-48 left-[12%] animate-leaf-sway motion-reduce:animate-none opacity-40"
+          style={{ animationDelay: '0.8s' }}
+        />
+
+        {spores.map(({ id, left, delay, duration }) => (
+          <span
+            key={id}
+            className="spore motion-reduce:animate-none"
+            style={{
+              left,
+              bottom: `${20 + (id % 5) * 10}%`,
+              animationDelay: delay,
+              animationDuration: duration,
+            }}
+          />
+        ))}
+      </div>
 
       <header className="relative z-10 border-b border-leaf/20 bg-canopy/30 backdrop-blur-md sticky top-0">
         <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
@@ -96,7 +98,7 @@ export default function Solarpunk() {
 
           <Link
             to="/"
-            className="text-sm text-[#e8f0e4]/70 hover:text-leaf-light transition-colors border border-leaf/25 px-4 py-2 rounded-full hover:border-leaf/50 shrink-0"
+            className="text-sm text-[#e8f0e4]/70 hover:text-leaf-light transition-colors border border-leaf/25 px-4 py-2 rounded-full hover:border-leaf/50 shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-light"
           >
             ← Return to shore
           </Link>
@@ -184,9 +186,9 @@ export default function Solarpunk() {
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-5 text-leaf-light hover:text-bloom transition-colors"
+                    className="inline-block mt-5 text-leaf-light hover:text-bloom transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-light"
                   >
-                    Read more →
+                    Read more <span className="sr-only">about {title} (opens in a new tab)</span>→
                   </a>
                 )}
 
@@ -195,9 +197,9 @@ export default function Solarpunk() {
                     href={`${import.meta.env.BASE_URL}${file.replace(/^\/+/, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block mt-5 text-leaf-light hover:text-bloom transition-colors"
+                    className="inline-block mt-5 text-leaf-light hover:text-bloom transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-light"
                   >
-                    Open PDF →
+                    Open PDF <span className="sr-only">of {title} (opens in a new tab)</span>→
                   </a>
                 )}
 
@@ -252,7 +254,7 @@ export default function Solarpunk() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group"
+                className="block group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-light rounded-lg"
               >
 
                 <article className="relative reclaimed-card rounded-lg p-6 hover:border-leaf/50 transition-all duration-300 hover:-translate-y-1">
@@ -266,6 +268,7 @@ export default function Solarpunk() {
                   <p className="text-[#bdd4b6] leading-relaxed">
                     {role}
                   </p>
+                  <span className="sr-only"> (opens in a new tab)</span>
 
                 </article>
 
@@ -319,7 +322,7 @@ export default function Solarpunk() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group opacity-75 hover:opacity-100"
+                className="block group opacity-75 hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf-light focus-visible:opacity-100 rounded-lg"
               >
 
                 <article className="relative reclaimed-card rounded-lg p-6 transition-all duration-300 hover:-translate-y-1">
@@ -333,6 +336,7 @@ export default function Solarpunk() {
                   <p className="text-[#a6b89f] leading-relaxed">
                     {role}
                   </p>
+                  <span className="sr-only"> (opens in a new tab)</span>
 
                 </article>
 

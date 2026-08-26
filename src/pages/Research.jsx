@@ -57,7 +57,7 @@ const publications = [
     title: 'A Glimpse into the Future, Or How to Treat AI with Due Empathy',
     venue: 'Apart Research Digital Minds',
     type: 'Essay',
-    href: 'https://docs.google.com/document/d/1Z_vqBXKKIHiU6czUCBkHw6XY3qXkGwm8VO9eG7LjZJA/edit?usp=sharing',
+    href: 'https://apartresearch.com/project/a-glimpse-into-the-future-or-how-to-treat-ai-with-due-empathy-uvcp',
     note: 'Interdisciplinary commentary',
   },
   {
@@ -136,9 +136,10 @@ export default function Research() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-serif text-lg text-themed-primary group-hover:text-sea-deep dark:group-hover:text-sand transition-colors"
+                className="font-serif text-lg text-themed-primary group-hover:text-sea-deep dark:group-hover:text-sand transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
               >
                 {title}
+                <span className="sr-only"> (opens in a new tab)</span>
               </a>
               <span className="text-xs uppercase tracking-wider text-sand dark:text-sand/80">
                 {type}
@@ -166,7 +167,7 @@ export default function Research() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 rounded-sm border border-themed hover:border-sea-deep/40 dark:hover:border-sand/30 transition-colors group"
+              className="p-5 rounded-sm border border-themed hover:border-sea-deep/40 dark:hover:border-sand/30 transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
               style={{ backgroundColor: 'var(--card-bg)' }}
             >
               <span className="text-xs uppercase tracking-wider text-sea-deep dark:text-sand">
@@ -176,7 +177,7 @@ export default function Research() {
                 {desc}
               </p>
               <span className="text-sm text-themed-muted mt-2 inline-block">
-                View project →
+                View project <span className="sr-only">(opens in a new tab)</span>→
               </span>
             </a>
           ))}
@@ -189,18 +190,18 @@ export default function Research() {
           href="https://orcid.org/0009-0001-6835-5532"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sea-deep dark:text-sand hover:opacity-80 underline underline-offset-2"
+          className="text-sea-deep dark:text-sand hover:opacity-80 underline underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
         >
-          ORCID
+          ORCID<span className="sr-only"> (opens in a new tab)</span>
         </a>{' '}
         or{' '}
         <a
           href="https://www.linkedin.com/in/jeanne-vincendeau/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sea-deep dark:text-sand hover:opacity-80 underline underline-offset-2"
+          className="text-sea-deep dark:text-sand hover:opacity-80 underline underline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
         >
-          LinkedIn
+          LinkedIn<span className="sr-only"> (opens in a new tab)</span>
         </a>
         .
       </p>

@@ -17,7 +17,7 @@ export default function Home() {
 
           <div className="lg:col-span-7">
 
-            <p className="text-xs uppercase tracking-[0.3em] text-sea-deep dark:text-sand font-medium mb-6 whitespace-nowrap">
+            <p className="text-xs uppercase tracking-[0.3em] text-sea-deep dark:text-sand font-medium mb-6">
               Research • Policy • Communication
             </p>
 
@@ -43,7 +43,7 @@ export default function Home() {
 
               <Link
                 to="/research"
-                className="inline-flex items-center px-7 py-3 rounded-md text-sm font-medium transition-all"
+                className="inline-flex items-center px-7 py-3 rounded-md text-sm font-medium transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
                 style={{
                   backgroundColor: "var(--btn-primary-bg)",
                   color: "var(--btn-primary-text)",
@@ -54,7 +54,7 @@ export default function Home() {
 
               <Link
                 to="/about"
-                className="inline-flex items-center px-7 py-3 rounded-md border border-themed-strong text-sm font-medium hover:border-sea-deep dark:hover:border-sand transition-all"
+                className="inline-flex items-center px-7 py-3 rounded-md border border-themed-strong text-sm font-medium hover:border-sea-deep dark:hover:border-sand transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
               >
                 About me
               </Link>
@@ -67,8 +67,10 @@ export default function Home() {
           <div className="lg:col-span-5 flex justify-center">
 
           <div className="relative w-full max-w-md overflow-visible mx-auto">
-            <OliveBranches />
-            <div className="portrait-glow" />
+            <div aria-hidden="true">
+              <OliveBranches />
+              <div className="portrait-glow" />
+            </div>
 
               {/* Portrait */}
 
@@ -82,7 +84,7 @@ export default function Home() {
               >
                 <img
                   src={`${import.meta.env.BASE_URL}portrait.png`}
-                  alt="Jeanne Vincendeau"
+                  alt="Portrait of Jeanne Vincendeau"
                   className="w-full h-full object-cover object-top"
                 />
               </div>

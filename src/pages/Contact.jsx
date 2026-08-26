@@ -21,7 +21,7 @@ export default function Contact() {
             <a
               key={label}
               href={href}
-              className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 p-4 rounded-sm border border-themed hover:border-sea-deep/40 dark:hover:border-sand/30 transition-colors group"
+              className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 p-4 rounded-sm border border-themed hover:border-sea-deep/40 dark:hover:border-sand/30 transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand"
               style={{ backgroundColor: 'var(--card-bg)' }}
             >
               <span className="text-xs uppercase tracking-wider text-sea-deep dark:text-sand w-32 shrink-0">
@@ -42,12 +42,12 @@ export default function Contact() {
           }}
         >
           <h2 className="font-serif text-2xl mb-4">A note on collaboration</h2>
-          <p className="text-sm leading-relaxed mb-6 opacity-90">
+          <p className="text-sm leading-relaxed mb-6 opacity-95">
             I am interested in partnerships on global AI governance,
             AI geopolitics and political violence. If you are a scholar, policy practitioner, or organisation and your project touches any of
             these strands, I would be delighted to hear from you.
           </p>
-          <p className="text-sm italic font-serif opacity-70">
+          <p className="text-sm italic font-serif opacity-85">
             Response times may vary, thank you for your patience.
           </p>
         </div>
