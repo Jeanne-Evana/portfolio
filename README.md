@@ -12,4 +12,4 @@ The site brings together my research, writing, projects, and the communities I w
 - `/contact` — Contact and social links
 - `/surprise` — A hidden solarpunk portfolio exploring technology, nature, and community
 
-## jeanne-evana.github.io/portfolio/
+🌊 **Live site:** https://jeanne-evana.github.io/portfolio/
