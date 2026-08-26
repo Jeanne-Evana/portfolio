@@ -1,52 +1,15 @@
 # Personal Site
 
-A personal academic website built with React, Vite, and Tailwind CSS.
+My personal academic website, built with React, Vite, and Tailwind CSS.
 
-## Aesthetic
-
-- **Main site (light):** Light academia — a sunlit library by the sea, warm parchment, wood tones, sea-glass accents.
-- **Main site (dark):** Dark academia — deep walnut, burgundy, candlelit gold (toggle in the header).
-- **Surprise page (`/surprise`):** Solarpunk ecosystem portfolio — tropical vegetation reclaiming the page; AI as part of nature, not separate from it.
+The site brings together my research, writing, projects, and the communities I work with, with a visual identity inspired by libraries, the Mediterranean, and the relationship between technology and society.
 
 ## Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home — hero, areas of inquiry, recent work |
-| `/about` | Biography, affiliations, education |
-| `/research` | Publications and projects |
-| `/contact` | Email and social links |
-| `/surprise` | Hidden solarpunk creative portfolio |
+- `/` — Home, research interests, and selected work
+- `/about` — Background, education, languages, and affiliations
+- `/research` — Publications, essays, and research projects
+- `/contact` — Contact and social links
+- `/surprise` — A hidden solarpunk portfolio exploring technology, nature, and community
 
-## Getting started
-
-Requires [Node.js](https://nodejs.org/) 18+.
-
-```bash
-cd personal-site
-npm install
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173).
-
-## Customisation
-
-Replace placeholder content in:
-
-- `index.html` — page title
-- `src/components/Layout.jsx` — your name and tagline
-- `src/pages/About.jsx` — bio, affiliations, education
-- `src/pages/Research.jsx` — publications list
-- `src/pages/Contact.jsx` — email and social links
-- `src/pages/Solarpunk.jsx` — creative portfolio items
-- `src/pages/Home.jsx` — hero copy and portrait placeholder
-
-## Build for production
-
-```bash
-npm run build
-npm run preview
-```
-
-Deploy the `dist/` folder to any static host (Netlify, Vercel, GitHub Pages, etc.).
+🌊 **Live site:** https://jeanne-evana.github.io/portfolio/
