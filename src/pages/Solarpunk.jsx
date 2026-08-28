@@ -169,7 +169,7 @@ export default function Solarpunk() {
                 key={title}
                 className="relative reclaimed-card rounded-lg p-6 hover:border-leaf/50 transition-all duration-500 hover:-translate-y-0.5 group"
               >
-                <p className="text-xs uppercase tracking-widest text-moss mb-2">
+                <p className="text-xs uppercase tracking-widest text-leaf-light mb-2">
                   {medium}
                 </p>
 

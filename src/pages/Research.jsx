@@ -57,7 +57,7 @@ const publications = [
     title: 'A Glimpse into the Future, Or How to Treat AI with Due Empathy',
     venue: 'Apart Research Digital Minds',
     type: 'Essay',
-    href: 'https://apartresearch.com/project/a-glimpse-into-the-future-or-how-to-treat-ai-with-due-empathy-uvcp',
+    href: 'https://docs.google.com/document/d/1Z_vqBXKKIHiU6czUCBkHw6XY3qXkGwm8VO9eG7LjZJA/edit?usp=sharing',
     note: 'Interdisciplinary commentary',
   },
   {
@@ -141,7 +141,7 @@ export default function Research() {
                 {title}
                 <span className="sr-only"> (opens in a new tab)</span>
               </a>
-              <span className="text-xs uppercase tracking-wider text-sand dark:text-sand/80">
+              <span className="text-xs uppercase tracking-wider text-sand-deep dark:text-sand/80">
                 {type}
               </span>
             </div>

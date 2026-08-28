@@ -26,6 +26,7 @@
   --color-sea-deep: #587d9b;
 
   --color-sand: #ccb18d;
+  --color-sand-deep: #8a6a45;
   --color-olive: #7b8566;
   --color-bronze: #9b7653;
 
@@ -537,7 +538,15 @@ section {
 
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+
+/* background-attachment: fixed is a common cause of scroll jank/stutter
+   on mobile browsers (notably Android Chrome), so it's applied on
+   larger screens only, where it renders smoothly. */
+@media (min-width: 768px) {
+  .dark .library-bg {
+    background-attachment: fixed;
+  }
 }
 
 .sea-section > * {
@@ -619,4 +628,20 @@ section {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ==================================================
+   Respect "reduce motion" system setting
+   Anyone with motion sensitivity/vestibular issues who
+   has this turned on will get a static, still version
+   of every decorative animation on the site.
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
