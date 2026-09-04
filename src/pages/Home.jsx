@@ -64,13 +64,15 @@ export default function Home() {
           </div>
 
           {/* Right column */}
+
           <div className="lg:col-span-5 flex justify-center">
 
-          <div className="relative w-full max-w-md overflow-visible mx-auto">
-            <div aria-hidden="true">
-              <OliveBranches />
-              <div className="portrait-glow" />
-            </div>
+            <div className="relative w-full max-w-md overflow-visible mx-auto">
+
+              <div aria-hidden="true">
+                <OliveBranches />
+                <div className="portrait-glow" />
+              </div>
 
               {/* Portrait */}
 
@@ -82,11 +84,13 @@ export default function Home() {
                     "0 28px 56px rgba(28,26,22,.10)",
                 }}
               >
+
                 <img
                   src={`${import.meta.env.BASE_URL}portrait.png`}
                   alt="Portrait of Jeanne Vincendeau"
                   className="w-full h-full object-cover object-top"
                 />
+
               </div>
 
             </div>
@@ -96,14 +100,17 @@ export default function Home() {
         </div>
 
       </section>
+
+
       {/* =========================
           Areas of Inquiry
       ========================== */}
 
-<section
+      <section
         className="border-y border-themed sea-section"
         style={{ backgroundColor: "var(--bg-elevated)" }}
       >
+
         <div className="max-w-6xl mx-auto px-6 py-24">
 
           <h2 className="font-serif text-3xl text-themed-primary text-center mb-4">
@@ -120,17 +127,33 @@ export default function Home() {
             {[
               {
                 title: "AI Governance",
-                desc: "Concentration of power in Global AI Governance, AI for diplomacy, and multilingual safety benchmarks. Who governs and in whose language.",
+                topics: [
+                  "Concentration of power in AI development and deployment",
+                  "AI for diplomacy: tools, institutions, and asymmetries",
+                  "Multilingual safety benchmarks and non-Western linguistic perspectives",
+                ],
               },
+
               {
                 title: "Political Violence",
-                desc: "Interpersonal violence, including psychology of terrorism, counterterrorism legislation, violent protests, state repression and geopolitics.",
+                topics: [
+                  "Terrorism: recruitment pathways, psychology, and legal frameworks",
+                  "Violent protests: popular dissidence and civil resistance",
+                  "Government repression and the politics of public order",
+                ],
               },
+
               {
                 title: "International Relations",
-                desc: "Global governance from cooperation to competition, with multilingual and multicultural perspectives from middle powers and Global South countries.",
+                topics: [
+                  "Global governance from cooperation to competition",
+                  "Multilingual and multicultural perspectives",
+                  "Pan-Asian collaboration portfolio and field experience in China",
+                ],
               },
-            ].map(({ title, desc }) => (
+
+            ].map(({ title, topics }) => (
+
               <article
                 key={title}
                 className="p-8 border border-themed transition-all duration-300 hover:-translate-y-1"
@@ -139,19 +162,42 @@ export default function Home() {
                   borderRadius: "8px",
                 }}
               >
+
                 <h3 className="font-serif text-2xl text-themed-primary mb-5">
                   {title}
                 </h3>
 
-                <p className="text-themed-muted leading-8 text-[15px]">
-                  {desc}
-                </p>
+                <ul className="space-y-3">
+
+                  {topics.map((topic) => (
+
+                    <li
+                      key={topic}
+                      className="text-themed-muted text-[15px] leading-relaxed flex gap-3"
+                    >
+
+                      <span className="text-sea-deep dark:text-sand shrink-0">
+                        ·
+                      </span>
+
+                      <span>
+                        {topic}
+                      </span>
+
+                    </li>
+
+                  ))}
+
+                </ul>
+
               </article>
+
             ))}
 
           </div>
 
         </div>
+
       </section>
 
     </div>
