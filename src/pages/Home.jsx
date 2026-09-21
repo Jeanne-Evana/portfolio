@@ -86,7 +86,7 @@ export default function Home() {
               >
 
                 <img
-                  src={`${import.meta.env.BASE_URL}portrait.png`}
+                  src={`${import.meta.env.BASE_URL}New_Portrait.jpg`}
                   alt="Portrait of Jeanne Vincendeau"
                   className="w-full h-full object-cover object-top"
                 />
