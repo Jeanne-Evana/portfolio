@@ -35,7 +35,7 @@ const publications = [
     venue: 'Apart Research Digital Minds',
     type: 'Essay',
     href:
-      'https://docs.google.com/document/d/1Z_vqBXKKIHiU6czUCBkHw6XY3qXkGwm8VO9eG7LjZJA/edit?usp=sharing',
+      'https://apartresearch.com/sprints/projects/a-glimpse-into-the-future-or-how-to-treat-ai-with-due-empathy-uvcp',
     note: 'Interdisciplinary commentary',
   },
   {
