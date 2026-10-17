@@ -6,6 +6,7 @@ const navLinks = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
   { to: '/research', label: 'Research' },
+  { to: '/mentees', label: 'Mentees' },
   { to: '/contact', label: 'Contact' },
 ]
 
@@ -32,14 +33,14 @@ export default function Layout() {
           </NavLink>
 
           <div className="flex items-center justify-between w-full sm:w-auto gap-2 sm:gap-4 shrink-0">
-            <nav className="flex items-center gap-1 sm:gap-5">
+            <nav aria-label="Main" className="flex flex-wrap items-center sm:gap-5">
               {navLinks.map(({ to, label, end }) => (
                 <NavLink
                   key={to}
                   to={to}
                   end={end}
                   className={({ isActive }) =>
-                    `text-sm font-medium px-3 py-2 rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand ${
+                    `text-sm font-medium px-2 sm:px-3 py-2 rounded-sm transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sea-deep dark:focus-visible:outline-sand ${
                       isActive
                         ? 'text-themed-primary border-b-2 border-sea-deep dark:border-sand'
                         : 'text-themed-muted hover:text-themed-primary'

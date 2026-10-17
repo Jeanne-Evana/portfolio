@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Research from './pages/Research'
+import Mentees from './pages/Mentees'
 import Contact from './pages/Contact'
 import Solarpunk from './pages/Solarpunk'
 
@@ -13,6 +14,7 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="research" element={<Research />} />
+        <Route path="mentees" element={<Mentees />} />
         <Route path="contact" element={<Contact />} />
       </Route>
       <Route path="surprise" element={<Solarpunk />} />
