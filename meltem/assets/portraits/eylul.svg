@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Portrait placeholder for Eylül Korkmaz">
+  <rect width="400" height="400" rx="28" fill="#F6D2B0"/>
+  <circle cx="300" cy="90" r="70" fill="#7C8C5A" fill-opacity="0.55"/>
+  <circle cx="200" cy="175" r="118" fill="#F3F4F1"/>
+  <path d="M70 350 C 110 230, 290 230, 330 350 Z" fill="#1B3A8A"/>
+  <circle cx="200" cy="168" r="74" fill="#E7B48A"/>
+  <path d="M128 168 C 150 70, 270 78, 276 175 C 240 120, 165 118, 128 168 Z" fill="#4A2740"/>
+  <text x="200" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#4A2740">photo placeholder</text>
+  <text x="200" y="378" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#F3F4F1">EK</text>
+</svg>

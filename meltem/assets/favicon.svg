@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Meltem">
+  <rect width="64" height="64" rx="12" fill="#F3F4F1"/>
+  <path d="M8 40 C 18 22, 28 50, 40 28 S 54 18, 58 36" fill="none" stroke="#1B3A8A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M10 28 C 22 44, 34 16, 48 32" fill="none" stroke="#A8323E" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="32" y="54" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#4A2740">M</text>
+</svg>

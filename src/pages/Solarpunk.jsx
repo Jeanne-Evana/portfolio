@@ -233,9 +233,9 @@ export default function Solarpunk() {
 
               {[
                 {
-                  title: "Horizon AGI - Fieldbuilding",
-                  role: "Co-founder · France",
-                  link: "https://www.horizonagi.fr/",
+                  title: "Meltem Art Fellowship",
+                  role: "Founder · Mentor",
+                  link: "https://jeanne-evana.github.io/meltem/index.html",
                 },
                 {
                   title: "AIxPhilo - Reading Group",
