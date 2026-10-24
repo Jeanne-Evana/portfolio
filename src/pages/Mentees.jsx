@@ -17,8 +17,8 @@ const programs = [
     note: 'Philosophy-meets-AI projects are on their way.',
   },
   {
-    id: 'ndc',
-    label: 'Vision Link (NDC)',
+    id: 'art',
+    label: 'Meltem Fellows',
     soon: true,
     note: 'Mentees from this programme will appear here soon.',
   },

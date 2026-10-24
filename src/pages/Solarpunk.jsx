@@ -297,8 +297,8 @@ export default function Solarpunk() {
                 },
                 {
                   title: "LUISS Language Café",
-                  role: "Volunteer · Rome",
-                  link: "https://www.instagram.com/luisslanguagecafe/",
+                  role: "Creative Manager · Rome",
+                  link: "https://languagecafe.it/",
                 },
                 {
                   title: "Ordre of Malta France",
